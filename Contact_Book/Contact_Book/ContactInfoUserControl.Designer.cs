@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            Id_label = new Label();
+            Name_textBox = new TextBox();
+            Surname_textBox = new TextBox();
+            PhoneNumber_textBox = new TextBox();
+            Birthday_dateTimePicker = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,61 +41,64 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(Id_label);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(68, 25);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // Id_label
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(3, 1);
-            label1.Name = "label1";
-            label1.Size = new Size(21, 19);
-            label1.TabIndex = 0;
-            label1.Text = "Id";
+            Id_label.AutoSize = true;
+            Id_label.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Id_label.Location = new Point(3, 1);
+            Id_label.Name = "Id_label";
+            Id_label.Size = new Size(21, 19);
+            Id_label.TabIndex = 0;
+            Id_label.Text = "Id";
             // 
-            // textBox1
+            // Name_textBox
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(77, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(202, 25);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "Name";
+            Name_textBox.BorderStyle = BorderStyle.FixedSingle;
+            Name_textBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Name_textBox.Location = new Point(77, 3);
+            Name_textBox.Name = "Name_textBox";
+            Name_textBox.Size = new Size(202, 25);
+            Name_textBox.TabIndex = 1;
+            Name_textBox.Text = "Name";
+            Name_textBox.TextChanged += Name_textBox_TextChanged;
             // 
-            // textBox2
+            // Surname_textBox
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(285, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(207, 25);
-            textBox2.TabIndex = 2;
-            textBox2.Text = "Surname";
+            Surname_textBox.BorderStyle = BorderStyle.FixedSingle;
+            Surname_textBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Surname_textBox.Location = new Point(285, 3);
+            Surname_textBox.Name = "Surname_textBox";
+            Surname_textBox.Size = new Size(207, 25);
+            Surname_textBox.TabIndex = 2;
+            Surname_textBox.Text = "Surname";
+            Surname_textBox.TextChanged += Surname_textBox_TextChanged;
             // 
-            // textBox3
+            // PhoneNumber_textBox
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(498, 3);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(124, 25);
-            textBox3.TabIndex = 3;
-            textBox3.Text = "Birthday";
+            PhoneNumber_textBox.BorderStyle = BorderStyle.FixedSingle;
+            PhoneNumber_textBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            PhoneNumber_textBox.Location = new Point(628, 3);
+            PhoneNumber_textBox.Name = "PhoneNumber_textBox";
+            PhoneNumber_textBox.Size = new Size(169, 25);
+            PhoneNumber_textBox.TabIndex = 4;
+            PhoneNumber_textBox.Text = "Phone number";
+            PhoneNumber_textBox.TextChanged += PhoneNumber_textBox_TextChanged;
             // 
-            // textBox4
+            // Birthday_dateTimePicker
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(628, 3);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(169, 25);
-            textBox4.TabIndex = 4;
-            textBox4.Text = "Phone number";
+            Birthday_dateTimePicker.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Birthday_dateTimePicker.Format = DateTimePickerFormat.Short;
+            Birthday_dateTimePicker.Location = new Point(498, 3);
+            Birthday_dateTimePicker.Name = "Birthday_dateTimePicker";
+            Birthday_dateTimePicker.Size = new Size(124, 25);
+            Birthday_dateTimePicker.TabIndex = 5;
+            Birthday_dateTimePicker.ValueChanged += Birthday_dateTimePicker_ValueChanged;
             // 
             // ContactInfoUserControl
             // 
@@ -103,10 +106,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(Birthday_dateTimePicker);
+            Controls.Add(PhoneNumber_textBox);
+            Controls.Add(Surname_textBox);
+            Controls.Add(Name_textBox);
             Controls.Add(panel1);
             Name = "ContactInfoUserControl";
             Size = new Size(801, 33);
@@ -119,10 +122,10 @@
         #endregion
 
         private Panel panel1;
-        private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private Label Id_label;
+        private TextBox Name_textBox;
+        private TextBox Surname_textBox;
+        private TextBox PhoneNumber_textBox;
+        private DateTimePicker Birthday_dateTimePicker;
     }
 }

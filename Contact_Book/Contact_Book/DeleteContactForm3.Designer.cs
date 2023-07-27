@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteContactForm3));
-            textBox1 = new TextBox();
+            Id_For_Delete_TextBox = new TextBox();
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // Id_For_Delete_TextBox
             // 
-            textBox1.Location = new Point(110, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            Id_For_Delete_TextBox.Location = new Point(110, 12);
+            Id_For_Delete_TextBox.Name = "Id_For_Delete_TextBox";
+            Id_For_Delete_TextBox.Size = new Size(100, 23);
+            Id_For_Delete_TextBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -60,6 +60,7 @@
             button1.TabIndex = 2;
             button1.Text = "Delete";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -69,6 +70,7 @@
             button2.TabIndex = 3;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // DeleteContactForm3
             // 
@@ -78,7 +80,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(Id_For_Delete_TextBox);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DeleteContactForm3";
             Text = "Delete Contact";
@@ -88,7 +90,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox Id_For_Delete_TextBox;
         private Label label1;
         private Button button1;
         private Button button2;

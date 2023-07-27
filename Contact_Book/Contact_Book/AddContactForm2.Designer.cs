@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddContactForm2));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            Name_TextBox = new TextBox();
+            PhoneNumber_TextBox = new TextBox();
+            Surname_TextBox = new TextBox();
             label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            Birthday_DateTimePicker = new DateTimePicker();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -42,26 +42,26 @@
             button2 = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // Name_TextBox
             // 
-            textBox1.Location = new Point(139, 76);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(199, 23);
-            textBox1.TabIndex = 0;
+            Name_TextBox.Location = new Point(139, 76);
+            Name_TextBox.Name = "Name_TextBox";
+            Name_TextBox.Size = new Size(199, 23);
+            Name_TextBox.TabIndex = 0;
             // 
-            // textBox2
+            // PhoneNumber_TextBox
             // 
-            textBox2.Location = new Point(139, 155);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(199, 23);
-            textBox2.TabIndex = 1;
+            PhoneNumber_TextBox.Location = new Point(139, 155);
+            PhoneNumber_TextBox.Name = "PhoneNumber_TextBox";
+            PhoneNumber_TextBox.Size = new Size(199, 23);
+            PhoneNumber_TextBox.TabIndex = 1;
             // 
-            // textBox3
+            // Surname_TextBox
             // 
-            textBox3.Location = new Point(139, 114);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(199, 23);
-            textBox3.TabIndex = 2;
+            Surname_TextBox.Location = new Point(139, 114);
+            Surname_TextBox.Name = "Surname_TextBox";
+            Surname_TextBox.Size = new Size(199, 23);
+            Surname_TextBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -73,12 +73,12 @@
             label1.TabIndex = 4;
             label1.Text = "Add Contact";
             // 
-            // dateTimePicker1
+            // Birthday_DateTimePicker
             // 
-            dateTimePicker1.Location = new Point(139, 199);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(199, 23);
-            dateTimePicker1.TabIndex = 5;
+            Birthday_DateTimePicker.Location = new Point(139, 199);
+            Birthday_DateTimePicker.Name = "Birthday_DateTimePicker";
+            Birthday_DateTimePicker.Size = new Size(199, 23);
+            Birthday_DateTimePicker.TabIndex = 5;
             // 
             // label2
             // 
@@ -128,6 +128,7 @@
             button1.TabIndex = 10;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -137,6 +138,7 @@
             button2.TabIndex = 11;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // AddContactForm2
             // 
@@ -149,11 +151,11 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(Birthday_DateTimePicker);
             Controls.Add(label1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(Surname_TextBox);
+            Controls.Add(PhoneNumber_TextBox);
+            Controls.Add(Name_TextBox);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddContactForm2";
             Text = "Add Contact";
@@ -163,11 +165,11 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox Name_TextBox;
+        private TextBox PhoneNumber_TextBox;
+        private TextBox Surname_TextBox;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker Birthday_DateTimePicker;
         private Label label2;
         private Label label3;
         private Label label4;
